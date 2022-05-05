@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo install started on `date`
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo post Build on `date`
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - scripts/after_install.sh
+    - scripts/start_httpd.sh
+    - scripts/stop_httpd.sh
